@@ -1,0 +1,36 @@
+<div class="container mt-5 pt-5">
+  <div>
+    <button (click)="handleBack()" class="btn btn-light">←Back</button>
+  </div>
+  <h1 class="text-center">Add Reminder</h1>
+  <form (submit)="handleSubmit($event)" class="w-50 m-auto" ngNativeValidate>
+    <div class="mt-3">
+      <label class="form-label">Patient ID</label>
+      <input [(ngModel)]="formdata.patientId" name="parentId" required class="form-control" />
+    </div>
+    <div class="mt-3">
+      <label class="form-label">Content</label>
+      <textarea [(ngModel)]="formdata.content" name="content" required class="form-control"></textarea>
+      <div class="form-text">What patient should do and should not to do.</div>
+    </div>
+    <div class="mt-3">
+      <label class="form-label">Date</label>
+      <input [(ngModel)]="formdata.date" name="date" class="form-control"  type="date"/>
+    </div>
+    <div class="mt-3">
+      <label class="form-label">Time</label>
+      <input [(ngModel)]="formdata.time" name="time" class="form-control" type="time"/>
+    </div>
+    <div class="mt-3">
+      <label class="form-label">Priority</label>
+      <select [(ngModel)]="formdata.type" name="type" class="form-select">
+        <option class="text-success" value="1">Low</option>
+        <option class="text-warning" value="2">Middle</option>
+        <option class="text-danger" value="3">High</option>
+      </select>
+    </div>
+    <div class="mt-3">
+      <button type="submit" class="btn btn-primary">Create</button>
+    </div>
+  </form>
+</div>

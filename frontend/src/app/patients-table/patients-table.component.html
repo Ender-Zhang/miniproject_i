@@ -1,0 +1,24 @@
+<div class="container mt-5">
+  <div>
+    <a routerLink="/create" class="btn btn-primary">Create</a>
+  </div>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Finished</th>
+      <th>Unfinished</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr (click)="handleClickPatient(item.id)" *ngFor="let item of patients">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.finishedReminderList.length}}</td>
+      <td>{{item.unfinishedReminderList.length}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>

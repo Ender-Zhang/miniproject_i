@@ -1,0 +1,20 @@
+<div class="container mt-5 pt-5">
+  <h1 class="text-center">Doctor Login</h1>
+  <form (submit)="handleSubmit()" class="w-50 m-auto" ngNativeValidate>
+    <div class="mt-3">
+      <label class="form-label">
+         Doctor Id
+      </label>
+      <input name="doctorId" [(ngModel)]="formdata.doctorId" required class="form-control" />
+    </div>
+    <div class="mt-3">
+      <label class="form-label">
+        Password
+      </label>
+      <input name="password" [(ngModel)]="formdata.password" required type="password" class="form-control" />
+    </div>
+    <div class="mt-3">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
